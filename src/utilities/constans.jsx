@@ -8,7 +8,8 @@ const ENDPOINTS = {
     BOOK_DELETE: 'Book/delete',
     BOOK_UPDATE: 'Book/update',
     BOOK_ADD_LIST: 'Book/addbooklist',
-    BOOK_GET: 'Book/get'
+    BOOK_GET: 'Book/get',
+    BOOK_IMAGE_UPDATE: 'Book/setbookimage'
 }
 
 const constans = {
@@ -20,6 +21,7 @@ const constans = {
     API_URL_BOOK_UPDATE: `${API_BASE_URL_DEVELOPMENT}/${ENDPOINTS.BOOK_UPDATE}`,
     API_URL_BOOK_ADD_LIST: `${API_BASE_URL_DEVELOPMENT}/${ENDPOINTS.BOOK_ADD_LIST}`,
     API_URL_BOOK_GET: `${API_BASE_URL_DEVELOPMENT}/${ENDPOINTS.BOOK_GET}`,
+    API_URL_BOOK_IMAGE_UPDATE: `${API_BASE_URL_DEVELOPMENT}/${ENDPOINTS.BOOK_IMAGE_UPDATE}`,
 }
 
 export default constans;

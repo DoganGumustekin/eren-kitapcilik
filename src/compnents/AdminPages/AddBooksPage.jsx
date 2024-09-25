@@ -25,12 +25,12 @@ function AddBooksPage() {
         }
       } 
       else{
-        setTypeError('Please select only excel file types');
+        setTypeError('Lütfen excel dosyası seçiniz.');
         setExcelFile(null);
       }
     } 
     else{
-      console.log('please select your file');
+      console.log('Lütfen dosya seçiniz');
     }
   }
 
@@ -70,9 +70,7 @@ function AddBooksPage() {
         console.log(responseData.message);
         return;
     }
-
-    alert('Veri kaydedildi: ');
-    // navigate('/setimagepage');
+    navigate('/setimagepage');
     }
   };
 

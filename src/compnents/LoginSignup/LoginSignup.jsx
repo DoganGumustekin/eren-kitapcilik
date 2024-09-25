@@ -42,19 +42,15 @@ function LoginSignup() {
         if (response.status !== 200) {
             console.log('Status: ', response.status);
             console.log('Data: ', responseData.Data);
-            console.log('Success: ', responseData.Success);
-            console.log('Message: ', responseData.Message);
             
             setSnackbarMessage(`Error: ${responseData.Message}`);
             setSnackbarSeverity('error');
             setSnackbarOpen(true);
             return;
         }
-
         // const jwtToken = response.token;
-
-        console.log('Token:', responseData.token);
-        console.log('Expiration:', responseData.expiration);
+        // console.log('Token:', responseData.token);
+        // console.log('Expiration:', responseData.expiration);
 
         const decodedToken = jwtDecode(responseData.token);
         const role = decodedToken.roles;
@@ -90,7 +86,7 @@ function LoginSignup() {
         console.log('Token:', responseData.token);
         console.log('Expiration:', responseData.expiration);
 
-        navigate('/userhomepage');
+        navigate('/searchbook');
     };
 
     return (
@@ -117,7 +113,6 @@ function LoginSignup() {
                     <input type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
                 </div>
             </div>
-            {action === "Sign Up" ? <div></div> : <div className="forgot-password">Lost Password <span>Click Here!</span></div>}
             <div className="submit-container">
                 {action === "Login" ? (<button className="submit" onClick={fetchForLogin}>Login</button>) : (<div className="submit" onClick={fetchForRegister}>Sign Up</div>)}
                 <div className="submit gray" onClick={() => setAction(action === "Login" ? "Sign Up" : "Login")}>{action === "Login" ? "Sign Up" : "Login"}</div>

@@ -7,7 +7,7 @@ const SearchBook = () => {
     const [input, setInput] = useState('')
 
     useEffect(()=>{
-        if(input.length>=4){
+        if(input.length>=3){
             getBooks()
         } else{
             getAllBooks();
